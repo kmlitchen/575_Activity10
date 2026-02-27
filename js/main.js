@@ -126,10 +126,11 @@ function createSequenceControls(attributes){
     document.querySelector(".range-slider").value = 0;
     document.querySelector(".range-slider").step = 1;
     // add buttons to slider
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">Reverse</button>');
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">Forward</button>');
-    // 3.8 make buttons an image **
-    
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse"></button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward"></button>');
+    // set button to png icons
+    document.querySelector('#reverse').insertAdjacentHTML('beforeend',"<img src='img/backward.png'>")
+    document.querySelector('#forward').insertAdjacentHTML('beforeend',"<img src='img/forward.png'>") // Next and Back icons by Thea Graph from Noun Project (CC BY 3.0)
     // internal fx to move slider <--> increment by button w/ circular looping
     var steps = document.querySelectorAll('.step');
     steps.forEach(function(step){
